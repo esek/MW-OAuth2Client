@@ -48,6 +48,8 @@ class OAuth2ClientHooks {
 
 		unset( $personal_urls['login'] );
 		unset( $personal_urls['anonlogin'] );
+		unset( $personal_urls['login-private'] );
+		unset( $personal_urls['loginprivate'] );
 		
 		if( $inExt ) {
 			$personal_urls['anon_oauth_login']['href'] = Skin::makeSpecialUrlSubpage( 'OAuth2Client', 'redirect' );
