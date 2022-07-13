@@ -92,7 +92,7 @@ class SpecialOAuth2Client extends SpecialPage {
 	}
 
 	private function _handleCallback(){
-		global $wgRequest;
+		global $wgRequest,$wgOAuth2Client;
 
 		try {
 			$storedState = $wgRequest->getSession()->get('oauth2state');
@@ -107,7 +107,8 @@ class SpecialOAuth2Client extends SpecialPage {
 
 			// Try to get an access token using the authorization code grant.
 			$accessToken = $this->_provider->getAccessToken('authorization_code', [
-				'code' => $_GET['code']
+				'code' => $_GET['code'],
+				'redirect_uri' => $wgOAuth2Client['configuration']['redirect_uri'],
 			]);
 		} catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
 			exit($e->getMessage()); // Failed to get the access token or user details.
