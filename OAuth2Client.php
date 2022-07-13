@@ -44,7 +44,9 @@ class OAuth2ClientHooks {
 			'text' => $service_login_link_text,
 			//'class' => ,
 			'active' => false,
-		);
+		);		
+
+		unset( $personal_urls['pt-login'] );
 		if( $inExt ) {
 			$personal_urls['anon_oauth_login']['href'] = Skin::makeSpecialUrlSubpage( 'OAuth2Client', 'redirect' );
 		} else {
