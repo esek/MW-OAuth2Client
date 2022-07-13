@@ -535,6 +535,9 @@ abstract class AbstractProvider
         $params   = $grant->prepareRequestParameters($params, $options);
         $request  = $this->getAccessTokenRequest($params);
         $response = $this->getParsedResponse($request);
+
+        print_r($response);
+        
         if (false === is_array($response)) {
             throw new UnexpectedValueException(
                 'Invalid response received from Authorization Server. Expected JSON.'
