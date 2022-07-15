@@ -74,9 +74,4 @@ class OAuth2ClientHooks {
 		return true;
 	}
 
-	public static function onUserLoadDefaults ($user, $name) {
-		print_r($user->getToken());
-		return true;
-	}
-
 }

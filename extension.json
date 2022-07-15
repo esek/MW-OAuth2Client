@@ -19,8 +19,7 @@
     "OAuth2ClientAlias": "OAuth2Client.alias.php"
   },
   "Hooks": {
-    "PersonalUrls": ["OAuth2ClientHooks::onPersonalUrls"],
-    "UserLoadDefaults": ["OAuth2ClientHooks::onUserLoadDefaults"]
+    "PersonalUrls": ["OAuth2ClientHooks::onPersonalUrls"]
   },
   "SpecialPages": {
     "OAuth2Client": "SpecialOAuth2Client"
