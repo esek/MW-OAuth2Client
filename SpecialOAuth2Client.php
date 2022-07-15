@@ -197,7 +197,7 @@ class SpecialOAuth2Client extends SpecialPage {
 
 		// Setup the session
 		$wgRequest->getSession()->persist();
-		$user->setCookies();
+		$user->setCookies($wgRequest, true, true);
 		$this->getContext()->setUser( $user );
 		$user->saveSettings();
 		RequestContext::getMain()->setUser( $user );
