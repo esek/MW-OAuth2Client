@@ -186,7 +186,6 @@ class SpecialOAuth2Client extends SpecialPage {
 		}
 		$user->setRealName($realname);
 		$user->setEmail($email);
-		$user->load();
 		if ( !( $user instanceof User && $user->getId() ) ) {
 			$user->addToDatabase();
 			// MediaWiki recommends below code instead of addToDatabase to create user but it seems to fail.
