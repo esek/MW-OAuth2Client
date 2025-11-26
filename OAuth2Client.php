@@ -30,7 +30,7 @@ class OAuth2ClientHooks {
 		# not especially useful as a returnto parameter. Use the title
 		# from the request instead, if there was one.
 		# see SkinTemplate->buildPersonalUrls()
-		$page = Title::newFromURL( $wgRequest->getVal( 'title', '' ) );
+		$page = Title::newFromText( $wgRequest->getVal( 'title', '' ) );
 
 		$service_name = isset( $wgOAuth2Client['configuration']['service_name'] ) && 0 < strlen( $wgOAuth2Client['configuration']['service_name'] ) ? $wgOAuth2Client['configuration']['service_name'] : 'OAuth2';
 		if( isset( $wgOAuth2Client['configuration']['service_login_link_text'] ) && 0 < strlen( $wgOAuth2Client['configuration']['service_login_link_text'] ) ) {
