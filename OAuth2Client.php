@@ -17,6 +17,7 @@
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This is a MediaWiki extension, and must be run from within MediaWiki.' );
 }
+use MediaWiki\Title\Title;
 class OAuth2ClientHooks {
 	public static function onSkinTemplateNavigation_Universal( SkinTemplate $skinTemplate, array &$links ) {
 
