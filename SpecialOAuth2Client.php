@@ -19,6 +19,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 require __DIR__.'/JsonHelper.php';
 
+use MediaWiki\Title\Title;
+
 class SpecialOAuth2Client extends SpecialPage {
 
 	private $_provider;
